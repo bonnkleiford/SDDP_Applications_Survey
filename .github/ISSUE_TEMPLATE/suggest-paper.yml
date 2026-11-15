@@ -1,0 +1,143 @@
+name: Suggest a paper
+description: Suggest a paper for the SDDP applications survey.
+title: 'Paper suggestion: '
+labels:
+- paper-suggestion
+body:
+- type: markdown
+  attributes:
+    value: 'Thank you for suggesting a paper for the SDDP applications survey. We check every suggestion
+      against the inclusion criteria on the website, so submitting a paper does not guarantee it will
+      be added.
+
+
+      **Issues on GitHub are public**, and so is your GitHub username. Please do not include personal
+      contact details. If you prefer not to use GitHub, use the email option on the website instead.
+
+
+      The first six fields are required. The technical details are optional but help us classify the paper;
+      authors usually know them best.'
+- type: input
+  id: paper_title
+  attributes:
+    label: Paper title
+  validations:
+    required: true
+- type: input
+  id: authors
+  attributes:
+    label: Authors
+    placeholder: Seranilla, B.K., Löhndorf, N.
+  validations:
+    required: true
+- type: input
+  id: journal
+  attributes:
+    label: Journal
+  validations:
+    required: true
+- type: input
+  id: year
+  attributes:
+    label: Year published online
+    description: The current list covers papers published online by 31 October 2026.
+    placeholder: '2026'
+  validations:
+    required: true
+- type: input
+  id: link
+  attributes:
+    label: DOI or link
+    placeholder: https://doi.org/...
+  validations:
+    required: true
+- type: textarea
+  id: sddp_use
+  attributes:
+    label: How does the paper use SDDP?
+    description: The problem it solves and the SDDP variant it uses (one or two sentences).
+  validations:
+    required: true
+- type: input
+  id: area
+  attributes:
+    label: Application area
+    description: 'One of: Hydro-thermal scheduling; Renewable integration; Dispatch and unit commitment;
+      Capacity and expansion planning; Storage; Grids and microgrids; Markets, trading and investment;
+      Reservoir and river-basin management; Finance; Supply chain, production and logistics; Disaster
+      and humanitarian; Agriculture and agri-food; Mining and natural resources; Healthcare; Telecommunications;
+      Academic / Theory. Leave blank if you are not sure.'
+- type: input
+  id: discrete
+  attributes:
+    label: Discrete decisions
+    description: Does the model include discrete decisions (SDDiP or similar)?
+    placeholder: Yes or No
+- type: input
+  id: relation
+  attributes:
+    label: Your relation to the paper
+    placeholder: Author or Not an author
+- type: markdown
+  attributes:
+    value: '### Technical details (optional)'
+- type: input
+  id: stages
+  attributes:
+    label: Number of stages
+    placeholder: e.g., 120 monthly stages
+- type: input
+  id: realizations
+  attributes:
+    label: Realizations per stage
+    placeholder: e.g., 20 scenarios per stage
+- type: input
+  id: state_vars
+  attributes:
+    label: Number of state variables
+    placeholder: e.g., 4 reservoir levels
+- type: input
+  id: stagewise
+  attributes:
+    label: Random process stage-wise independent?
+    placeholder: Yes or No
+- type: input
+  id: random_process
+  attributes:
+    label: Model of the random process
+    placeholder: e.g., AR(1) with lagged states
+- type: input
+  id: integer_nonconvex
+  attributes:
+    label: How integer and nonconvex features are treated
+    placeholder: e.g., none, or binarization
+- type: input
+  id: stopping_rule
+  attributes:
+    label: Stopping rule or criterion
+    placeholder: e.g., fixed iterations, or 1% gap
+- type: input
+  id: lower_bound
+  attributes:
+    label: Final lower bound
+    placeholder: e.g., 1.23e6 (200 iterations)
+- type: input
+  id: upper_bound
+  attributes:
+    label: Statistical upper bound or out-of-sample estimate
+    placeholder: e.g., 1.25e6 (1,000 simulations)
+- type: input
+  id: run_time
+  attributes:
+    label: Run time
+    placeholder: e.g., 3 hours on 16 cores
+- type: input
+  id: software
+  attributes:
+    label: Software used
+    placeholder: e.g., SDDP.jl and Gurobi
+- type: input
+  id: submitter
+  attributes:
+    label: Your name (optional)
+    description: Optional. Leave blank if you prefer; your GitHub username is shown anyway.
